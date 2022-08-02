@@ -16,13 +16,17 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func buttonPressed(_ sender: Any) {
-        lightOn.toggle()
+    func updateUI() {
         if lightOn {
             view.backgroundColor = .white
         } else {
             view.backgroundColor = .black
         }
+    }
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        lightOn.toggle()
+        updateUI()
     }
 }
 
