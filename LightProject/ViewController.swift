@@ -12,16 +12,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
         // Do any additional setup after loading the view.
     }
 
-
+    //@IBOutlet var lightButton: UIButton!
+    
     func updateUI() {
-        if lightOn {
-            view.backgroundColor = .white
-        } else {
-            view.backgroundColor = .black
-        }
+        view.backgroundColor = lightOn ? .white : .black
+//        if lightOn {
+//            view.backgroundColor = .white
+//            //lightButton.setTitle("Off", for: .normal)
+//        } else {
+//            view.backgroundColor = .black
+//            //lightButton.setTitle("On", for: .normal)
+//        }
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
